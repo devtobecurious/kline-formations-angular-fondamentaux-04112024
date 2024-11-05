@@ -1,0 +1,23 @@
+<h1>{{ title }}</h1>
+
+@if(toggle) {
+  <img src="https://www.starwars-holonet.com/holonet/dictionnaire/photos/ship_ds1.jpg" >
+}
+
+<kline-list-films></kline-list-films>
+
+<!-- @for (item of films; track $index) {
+  <div>{{item}}</div>
+} -->
+
+<button (click)="toggleImage()">Afficher logo</button>
+<button (click)="add()">[+]</button>
+
+
+@if(isEmpty) {
+  <i>Aucun film présent</i>
+}
+
+@if(! isEmpty) {
+<button (click)="remove()">[-]</button>
+}

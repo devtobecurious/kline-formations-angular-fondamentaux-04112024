@@ -1,0 +1,12 @@
+@let mesItems = items();
+
+<h1>
+{{ title() }}
+</h1>
+<h2>{{ subTitle }} </h2>
+
+@for (item of mesItems; track $index) {
+    <div>{{item}} <button (click)="deleteOneItem(item)">[-]</button></div>
+}
+
+<i>Il y a {{ mesItems.length }} films(s)</i>

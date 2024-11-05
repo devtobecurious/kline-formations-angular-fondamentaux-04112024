@@ -1,0 +1,6 @@
+<select>
+    <option>[...]</option>
+    @for (item of items(); track $index) {
+        <option value="{{ item?.id }}">{{item.surname }}</option>
+    }
+</select>
