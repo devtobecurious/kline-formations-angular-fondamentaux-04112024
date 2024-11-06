@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { filter, Observable } from "rxjs";
 import { Films } from "../models/film";
 import { FilmsResult } from "./custom-types";
 
@@ -11,6 +11,9 @@ export class GetAllFilmsService {
     private readonly httpClient = inject(HttpClient)
 
     getAll(): Observable<FilmsResult> {
-        return this.httpClient.get<FilmsResult>('https://swapi.dev/api/films/')
+        return this.httpClient.get<FilmsResult>('https://swapi.dev/api/films/').pipe
+        (
+            //filter((result) => result?.results.length > 0)
+        )
     }
 }
