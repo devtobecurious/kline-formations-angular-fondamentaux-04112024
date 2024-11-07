@@ -13,12 +13,16 @@ import { AsyncPipe } from '@angular/common';
   imports: [TableFilmsComponent, FiltersFilmsComponent, AsyncPipe],
   //templateUrl: './list-films.component.html',
   template: `
-    @let films = films$ | async;
+   
 
     {{ subTitle() }}
     <kline-filters-films />
-    @if(films) {
+    @if(films$ | async; as films) {
       <kline-table-films (onDeleted)="deleteOne($event)" [items]="films" title="Liste des films" subTitle="A star wars story" />
+    }
+
+    @if(films$ | async; as films) {
+
     }
     <button (click)="goToNew()" >Nouveau</button>
   `,
