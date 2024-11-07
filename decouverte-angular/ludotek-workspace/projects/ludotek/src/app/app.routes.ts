@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ListFilmsComponent } from '../../features/films/components/list-films/list-films.component';
 import { AddFilmComponent } from '../../features/films/components/add-film/add-film.component';
+import { EditFilmComponent } from '../../features/films/components/edit-film/edit-film.component';
 
 export const routes: Routes = [
     {
@@ -14,5 +15,9 @@ export const routes: Routes = [
     {
         path: 'films/add',
         component: AddFilmComponent
+    },
+    {
+        path: 'films/edit/:id',
+        component: EditFilmComponent
     }
 ];
