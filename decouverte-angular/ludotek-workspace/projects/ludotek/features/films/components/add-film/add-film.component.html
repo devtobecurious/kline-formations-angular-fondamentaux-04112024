@@ -1,0 +1,8 @@
+{{ item | json }}
+
+<form #filmForm="ngForm" (ngSubmit)="save()">
+    <label>Titre : </label>
+    <input name="title" minlength="3" type="text" required [(ngModel)]="item.title">
+
+    <button [disabled]="! filmForm.form.valid" type="submit">Ajouter</button>
+</form>
