@@ -66,7 +66,7 @@ export class ListFilmsComponent implements OnInit, OnDestroy {
   }
 
   goToNew(): void {
-    this.router.navigate(['films/add'])
+    this.router.navigate(['films/add', 1])
   }
 
   deleteOne(item: Film): void {

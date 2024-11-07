@@ -1,15 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListShipsComponent } from './list-ships.component';
-import { GetAllShips, GetAllShipsService } from '../../services/get-all-ships.service';
+import { fake, GetAllShips, GetAllShipsService } from '../../services/get-all-ships.service';
 import { delay, Observable, of } from 'rxjs';
 import { initialValues, Ships } from '../../models';
 
-const fake: GetAllShips = {
-  getAll(): Observable<Ships> {
-    return of(initialValues)//.pipe(delay(1500))
-  }
-}
+
 
 fdescribe('ListShipsComponent', () => {
   let component: ListShipsComponent;

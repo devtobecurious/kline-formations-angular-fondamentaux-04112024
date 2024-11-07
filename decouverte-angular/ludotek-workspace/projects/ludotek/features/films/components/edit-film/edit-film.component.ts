@@ -26,8 +26,10 @@ export class EditFilmComponent implements OnInit {
     .pipe(
       debounceTime(200)
     )
-    .subscribe(changes => {
+    .subscribe({
+      next: changes => {
 
+      }
     })
   }
 
