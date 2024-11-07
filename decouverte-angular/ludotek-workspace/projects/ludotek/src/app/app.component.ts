@@ -1,13 +1,14 @@
 import { Component, viewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ListFilmsComponent } from '../../features/films/components/list-films/list-films.component';
 import { ObsVsPromiseComponent } from '../../learnings/obs-vs-promise/obs-vs-promise.component';
 import { AddFilmComponent } from '../../features/films/components/add-film/add-film.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ListFilmsComponent, ObsVsPromiseComponent, AddFilmComponent],
+  imports: [RouterOutlet, RouterLink, ListFilmsComponent, ObsVsPromiseComponent, AddFilmComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
 
-<kline-add-film></kline-add-film>
+<!-- <kline-add-film></kline-add-film> -->
 
 <!-- <kline-obs-vs-promise></kline-obs-vs-promise> -->
 
@@ -25,3 +25,11 @@
 @if(! isEmpty) {
 <button (click)="remove()">[-]</button>
 } -->
+
+<ul>
+  <li>
+    <a routerLink="films">Films</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

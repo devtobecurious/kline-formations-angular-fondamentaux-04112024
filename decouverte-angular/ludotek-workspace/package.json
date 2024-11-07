@@ -3,16 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-
     "pregabriel": "echo 'optic 2000'",
     "postgabriel": "echo 'allumez le feu'",
     "gabriel": "echo 'oh gabriel'",
     "prejohny": "npm run gabriel",
     "johny": "echo 'ah que que'",
-
     "prestart": "npm run johny",
     "start": "ng serve ludotek -o",
-    
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -27,6 +24,8 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "chart.js": "^4.4.6",
+    "d3": "^7.9.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -35,6 +34,7 @@
     "@angular-devkit/build-angular": "^18.2.11",
     "@angular/cli": "^18.2.11",
     "@angular/compiler-cli": "^18.2.0",
+    "@types/d3": "^7.4.3",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
