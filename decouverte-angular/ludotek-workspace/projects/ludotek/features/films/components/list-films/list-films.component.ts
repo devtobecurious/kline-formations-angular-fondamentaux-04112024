@@ -24,10 +24,7 @@ export class ListFilmsComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAll().subscribe({
-      next: (result) => {
-        const table: Films = result.results.map((film, index) => ({ id: index, title: film.title, description: '', year: parseInt(film.release_date) }))
-        this.films = table
-      }
+      next: (result) => this.films = result
     })
   }
 
